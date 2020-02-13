@@ -13,15 +13,29 @@
     */
     $(function() {
       // Write code here
+      let $li = $('il');
+      let $ifrm = $('#iframe');
+      let $a = $('a');
+      // $a[0].attr('href', '#')
+      // $a[1].attr('href', '#')
+      // $a[2].attr('href', '#')
+      $a.click((e)=>{
+        e.preventDefault();
+        console.log(e.target.href);
+        $ifrm.attr('src', e.target.href)
+      })
     });
     </script>
   </head>
   <body>
     <ul>
       <li><a href="http://hellohappy.org">Hello Happy</a></li>
-      <li><a href="http://duckduckgo.com">DuckDuckGo</a></li>
-      <li><a href="http://css-tricks.com">CSS Tricks</a></li>
+      <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+      <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
     </ul>
     <iframe id="iframe" src="http://hellohappy.org" width="800" height="480"></iframe>
+    <!-- "http://hellohappy.org"
+    "http://duckduckgo.com"
+    "http://google.com" -->
   </body>
 </html>
